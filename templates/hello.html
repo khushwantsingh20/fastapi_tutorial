@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head><style>
+    body {
+        background-color: #FFC499; /* light orange background */
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    #welcome-text {
+        font-size: 48px;
+        animation: animate 2s infinite;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    .image-container {
+    position: relative;
+    display: flex; /* Add this to display images horizontally */
+    flex-wrap: wrap; /* Add this to wrap images to the next line */
+}
+
+.image-container img {
+    position: relative; /* Change from absolute to relative */
+    width: 600px; /* Set width to 20px */
+    height: 300px; /* Set height to 10px */
+    margin: 5px; /* Add margin to separate images */
+    animation: hang 3s ease-in-out infinite;
+}
+
+@keyframes hang {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(10deg);
+    }
+}</style>
+    <title>Hanging Animation</title>
+
+</head>
+<body><h1 id="welcome-text">🌟 Welcome to image page! 🎉</h1>
+    <div class="image-container">
+        <img src="static/apsra.jpg" alt="Image 1" wid>
+        <img src="static/art_0.png" alt="Image 2">
+        <img src="static/art_1.png" alt="Image 2">
+        <img src="static/art_3.png" alt="Image 2">
+        <img src="static/art_4.png" alt="Image 2">
+        <img src="static/art_5.png" alt="Image 2">
+        <img src="static/art_6.png" alt="Image 2">
+        <img src="static/art_7.png" alt="Image 2">
+        <img src="static/art_8.png" alt="Image 2">
+        <img src="static/art_9.png" alt="Image 2">
+        
+        <!-- Add more images as needed -->
+        <!-- Add more images as needed -->
+</div>
+
+<script>const images = document.querySelectorAll('.image-container img');
+
+    // Add event listeners to control the animation
+    images.forEach((image) => {
+        image.addEventListener('mouseover', () => {
+            image.style.animationPlayState = 'running';
+        });
+    
+        image.addEventListener('mouseout', () => {
+            image.style.animationPlayState = 'paused';
+        });
+    });</script> <!-- link to your JavaScript file -->
+</body>
+</html>
